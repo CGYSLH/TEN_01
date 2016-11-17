@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_collect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mi.ten.CollectActivity">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f5f0"
+    android:id="@+id/collect_tb"
+    >
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+       <ImageButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/back"
+           android:layout_centerVertical="true"
+           android:id="@+id/collect_back"
+           android:background="@android:color/transparent"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="我的收藏"
+           android:textColor="#252825"
+           android:layout_centerInParent="true"
+           android:textSize="25sp"
+           />
+   </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/collect_show"
+        android:src="@drawable/icon_favorite_tip"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/collect_show"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="点击文章右下角红色图标\n    即可找到收藏的按钮"/>
+</RelativeLayout>

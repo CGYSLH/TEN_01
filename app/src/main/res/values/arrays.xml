@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="user">
+        <item>我的收藏</item>
+        <item>字体设置</item>
+        <item>关于十个</item>
+        <item>意见反馈</item>
+        <item>夜间模式</item>
+    </string-array>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mi.ten.MainActivity">
+  <RadioGroup
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:id="@+id/rg"
+      android:orientation="horizontal"
+      android:background="#1b201b"
+      android:gravity="center"
+      android:layout_alignParentBottom="true">
+    <RadioButton
+        android:id="@+id/radio0"
+        android:checked="true"
+        android:drawableBottom="@drawable/rb_01"
+        android:tag="0"
+        style="@style/rb"
+        />
+    <RadioButton
+        android:id="@+id/radio1"
+        android:drawableBottom="@drawable/rb_02"
+        android:tag="1"
+        style="@style/rb"
+        />
+    <RadioButton
+        android:id="@+id/radio2"
+        android:drawableBottom="@drawable/rb_03"
+        android:tag="2"
+        style="@style/rb"
+        />
+    <RadioButton
+        android:id="@+id/radio3"
+        android:drawableBottom="@drawable/rb_04"
+        android:tag="3"
+        style="@style/rb"
+        />
+  </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame"
+        android:layout_above="@id/rg"
+        ></FrameLayout>
+  <ImageButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/more"
+      android:id="@+id/more"
+      android:layout_above="@id/rg"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="30dp"
+      android:onClick="click"
+      android:background="#00ff0000"/>
+
+
+
+</RelativeLayout>

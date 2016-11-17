@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_collect_article"
+    >
+    <ImageView
+        android:id="@+id/imgView"
+        android:background="@drawable/start_bg"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/welcome_logo"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="半杯咖啡工作室"/>
+    </RelativeLayout>
+
+</RelativeLayout>

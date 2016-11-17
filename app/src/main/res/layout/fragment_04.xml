@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ed3245"
+        android:id="@+id/tb_fr_04"
+       >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#0000ff00"
+                android:id="@+id/iv_but"
+                android:src="@drawable/avator_login"
+                />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/avator_whiteline"
+                android:id="@+id/user_line"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_line"
+                android:text="点击用QQ登录"
+                android:textSize="16sp"
+                android:textColor="#f2f9f2"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_lv"></ListView>
+
+</LinearLayout>
