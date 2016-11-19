@@ -35,4 +35,15 @@ dependencies {
     compile 'com.labo.kaji:fragmentanimations:0.1.1'
     compile 'me.shaohui:bottomdialog:1.1.9'
     compile 'com.sdsmdg.tastytoast:tastytoast:0.1.0'
+    compile files('libs/MobCommons-2016.1107.1809.jar')
+    compile files('libs/MobTools-2016.1107.1809.jar')
+    compile files('libs/ShareSDK-Core-2.7.10.jar')
+    compile files('libs/ShareSDK-QQ-2.7.10.jar')
+    compile files('libs/ShareSDK-QZone-2.7.10.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.7.10.jar')
+    compile files('libs/ShareSDK-TencentWeibo-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.7.10.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.10.jar')
 }

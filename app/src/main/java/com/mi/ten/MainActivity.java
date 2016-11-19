@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
     @BindView(R.id.more)
     ImageButton more;
-    private float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
     @BindView(R.id.rg)
     RadioGroup rg;
+    private float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
     private ArrayList<Fragment> list_fr = new ArrayList<>();
     private FragmentManager manager;
     private Fragment lastFragment;
@@ -190,6 +190,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         Intent intent=new Intent(this,DialogActivityShare.class);
         intent.putExtra("saveurl",saveurl);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_from_bottom,R.anim.slide_out_to_bottom);//设置下一个Activity的进入方式
 
     }
 
