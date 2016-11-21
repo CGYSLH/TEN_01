@@ -6,43 +6,59 @@
     android:layout_height="match_parent"
     tools:context="com.mi.ten.CollectActivity">
 <android.support.v7.widget.Toolbar
+    android:id="@+id/collect_tb"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#f0f5f0"
-    android:id="@+id/collect_tb"
     >
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        >
        <ImageButton
+           android:id="@+id/collect_back"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:src="@drawable/back"
            android:layout_centerVertical="true"
-           android:id="@+id/collect_back"
-           android:background="@android:color/transparent"/>
+           android:background="@android:color/transparent"
+           android:src="@drawable/back"/>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
            android:text="我的收藏"
            android:textColor="#252825"
-           android:layout_centerInParent="true"
            android:textSize="25sp"
            />
    </RelativeLayout>
 </android.support.v7.widget.Toolbar>
+    
     <ImageView
+        android:id="@+id/collect_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/collect_show"
+        android:layout_centerInParent="true"
         android:src="@drawable/icon_favorite_tip"
-        android:layout_centerInParent="true"/>
+        android:visibility="gone"/>
     <TextView
+        android:id="@+id/collect_show_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/collect_show"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="点击文章右下角红色图标\n    即可找到收藏的按钮"/>
+        android:layout_marginTop="20dp"
+        android:text="点击文章右下角红色图标\n    即可找到收藏的按钮"
+        android:visibility="gone"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/ref"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/collect_tb">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/collect_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </RelativeLayout>

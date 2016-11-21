@@ -78,6 +78,7 @@ public class UsersFragment extends Fragment {
                 if (position == 0) {
                     //TastyToast.makeText(getContext(), "正在开发", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
                     startActivity(new Intent(getContext(), CollectActivity.class));
+
                 } else {
                     TastyToast.makeText(getContext(), "SORRY不会呀", TastyToast.LENGTH_LONG, TastyToast.CONFUSING);
                 }

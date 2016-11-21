@@ -80,7 +80,8 @@ public class DialogActivityShare extends Activity implements View.OnClickListene
                 helper.getReadableDatabase();
                  WhereFromUrl(url);
                 if (helper.getAllUrl().contains(url)) {
-                    Toast.makeText(this,"已经收藏过了",Toast.LENGTH_LONG).show();
+                    helper.delectUrl(url);
+                    Toast.makeText(this,"取消收藏",Toast.LENGTH_LONG).show();
                     finish();
                 } else {
                     helper.addUrl(url);

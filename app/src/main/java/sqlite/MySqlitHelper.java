@@ -40,6 +40,12 @@ public class MySqlitHelper extends SQLiteOpenHelper {
         SQLiteDatabase db=getReadableDatabase();
         db.execSQL("insert into table_share (url) values(?)",new Object[]{url});
     }
+    public void delectUrl(String url)
+    {
+        SQLiteDatabase db=getReadableDatabase();
+        db.execSQL("delete from table_share where url = ?",new String[]{url});
+        db.close();
+    }
     public ArrayList<String> getAllUrl()
     {
         SQLiteDatabase db=getReadableDatabase();
