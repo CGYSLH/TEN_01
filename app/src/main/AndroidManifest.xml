@@ -40,6 +40,9 @@
         <activity android:name=".CollectActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".CollectActivity_Swip"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
 
 <!-- 分享-->
 

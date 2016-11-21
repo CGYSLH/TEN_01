@@ -63,10 +63,7 @@ public class MoiveFragment extends Fragment {
     private MyDialogCustom dialog;
     private Dialog mydialog;
     private MoiveCallBack moiveCallBack;
-    public interface MoiveCallBack
-    {
-        void getMoiveUrl(String url);
-    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -116,9 +113,7 @@ public class MoiveFragment extends Fragment {
                     case 0:
                         Toast.makeText(getContext(), "亲 已经是最新内容了", Toast.LENGTH_LONG).show();
                         break;
-                    case 8:
-                        Toast.makeText(getContext(), "亲 只有十篇内容可以查看", Toast.LENGTH_LONG).show();
-                        break;
+
                 }
 
             }
@@ -164,6 +159,16 @@ public class MoiveFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        return CubeAnimation.create(CubeAnimation.UP, enter, 500);
+    }
+
+    public interface MoiveCallBack
+    {
+        void getMoiveUrl(String url);
+    }
+
     class MyAdapter extends FragmentStatePagerAdapter {
         public MyAdapter(FragmentManager fm) {
             super(fm);
@@ -179,10 +184,5 @@ public class MoiveFragment extends Fragment {
         public int getCount() {
             return itemMoivefragments.size();
         }
-    }
-
-    @Override
-    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
-        return CubeAnimation.create(CubeAnimation.UP, enter, 500);
     }
 }

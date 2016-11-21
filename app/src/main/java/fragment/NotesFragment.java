@@ -65,10 +65,7 @@ public class NotesFragment extends Fragment {
     private MyDialogCustom dialog;
     private Dialog mydialog;
     private NotesCallBack notesCallBack;
-    public interface NotesCallBack
-    {
-        void getNotesUrl(String url);
-    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -120,9 +117,7 @@ public class NotesFragment extends Fragment {
                     case 0:
                         Toast.makeText(getContext(), "亲 已经是最新内容了", Toast.LENGTH_LONG).show();
                         break;
-                    case 8:
-                        Toast.makeText(getContext(), "亲 只有十篇内容可以查看", Toast.LENGTH_LONG).show();
-                        break;
+
                 }
 
             }
@@ -162,6 +157,16 @@ public class NotesFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        return CubeAnimation.create(CubeAnimation.LEFT, enter, 500);
+    }
+
+    public interface NotesCallBack
+    {
+        void getNotesUrl(String url);
+    }
+
     class MyAdapter extends FragmentStatePagerAdapter {
         public MyAdapter(FragmentManager fm) {
             super(fm);
@@ -176,9 +181,5 @@ public class NotesFragment extends Fragment {
         public int getCount() {
             return list.size();
         }
-    }
-    @Override
-    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
-        return CubeAnimation.create(CubeAnimation.LEFT, enter, 500);
     }
 }

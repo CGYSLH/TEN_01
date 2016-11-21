@@ -46,6 +46,12 @@ public class MySqlitHelper extends SQLiteOpenHelper {
         db.execSQL("delete from table_share where url = ?",new String[]{url});
         db.close();
     }
+    public void delectAll(int id)
+    {
+        SQLiteDatabase db=getReadableDatabase();
+        db.execSQL("delete from table_share where _id > ?",new Integer[]{id});
+        db.close();
+    }
     public ArrayList<String> getAllUrl()
     {
         SQLiteDatabase db=getReadableDatabase();

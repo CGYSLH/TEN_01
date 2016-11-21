@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.labo.kaji.fragmentanimations.CubeAnimation;
 import com.mi.ten.CollectActivity;
+import com.mi.ten.CollectActivity_Swip;
 import com.mi.ten.QQUser;
 import com.mi.ten.R;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -77,7 +78,7 @@ public class UsersFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
                     //TastyToast.makeText(getContext(), "正在开发", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
-                    startActivity(new Intent(getContext(), CollectActivity.class));
+                    startActivity(new Intent(getContext(), CollectActivity_Swip.class));
 
                 } else {
                     TastyToast.makeText(getContext(), "SORRY不会呀", TastyToast.LENGTH_LONG, TastyToast.CONFUSING);
