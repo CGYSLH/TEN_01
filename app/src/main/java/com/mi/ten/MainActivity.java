@@ -78,12 +78,12 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     more.setVisibility(View.VISIBLE);
                 }
                 if (!list_fr.get(tag).isAdded()) {
-                    manager.beginTransaction().add(R.id.frame, list_fr.get(tag)).commit();
+                    manager.beginTransaction().add(R.id.frame, list_fr.get(tag)).commit();//该碎片没有被添加就添加该碎片
                 } else {
-                    manager.beginTransaction().show(list_fr.get(tag)).commit();
+                    manager.beginTransaction().show(list_fr.get(tag)).commit();//如果已经被添加就直接显示
                 }
-                manager.beginTransaction().hide(lastFragment).commit();
-                lastFragment = list_fr.get(tag);
+                manager.beginTransaction().hide(lastFragment).commit();//并隐藏上一个fragment
+                lastFragment = list_fr.get(tag);//记录当前的碎片
             }
         });
 

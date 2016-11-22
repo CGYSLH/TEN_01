@@ -2,43 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tb_fr_04"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ed3245"
-       >
-        <RelativeLayout
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_fr_04"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_weight="1"
-            android:gravity="center">
-            <ImageButton
-                android:id="@+id/iv_but"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#0000ff00"
-                android:src="@drawable/avator_login"
-                />
-            <ImageView
-                android:id="@+id/user_line"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/avator_whiteline"
-                />
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_line"
-                android:text="点击用QQ登录"
-                android:textColor="#f2f9f2"
-                android:textSize="16sp"/>
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
-    <ListView
-        android:id="@+id/user_lv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+            android:layout_height="wrap_content"
+            android:background="#ed3245"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/iv_but"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="#0000ff00"
+                    android:src="@drawable/avator_login"
+                    />
+                <ImageView
+                    android:id="@+id/user_line"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/avator_whiteline"
+                    />
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_line"
+                    android:text="点击用QQ登录"
+
+                    android:textColor="#f2f9f2"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <ListView
+            android:id="@+id/user_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+
 
 </LinearLayout>

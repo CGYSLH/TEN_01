@@ -56,8 +56,16 @@ public class DialogActivityShare extends Activity implements View.OnClickListene
 
         setContentView(R.layout.activity_dialog_share_01);
         ButterKnife.bind(this);
+
         url=getIntent().getStringExtra("saveurl");
         helper = new MySqlitHelper(this);
+
+        helper.getReadableDatabase();
+        if (helper.getAllUrl().contains(url)) {
+            but0.setImageResource(R.drawable.share_favorite_selected);
+        } else {
+            but0.setImageResource(R.drawable.share_favorite);
+        }
         but0.setOnClickListener(this);
         but1.setOnClickListener(this);
         but2.setOnClickListener(this);
@@ -74,13 +82,16 @@ public class DialogActivityShare extends Activity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()) {
+
             case R.id.but0:
 //                Toast.makeText(this,"得到网址"+url,Toast.LENGTH_LONG).show();
-                helper.getReadableDatabase();
+
                  WhereFromUrl(url);
                 if (helper.getAllUrl().contains(url)) {
                     helper.delectUrl(url);
+
                     Toast.makeText(this,"取消收藏",Toast.LENGTH_LONG).show();
                     finish();
                 } else {
@@ -119,7 +130,7 @@ public class DialogActivityShare extends Activity implements View.OnClickListene
            if (url.contains("Critic"))
            {
                //电影
-               FromUrl="电影";
+               FromUrl="影评";
 
 
            }else if (url.contains("Novel"))

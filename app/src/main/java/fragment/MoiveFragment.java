@@ -15,7 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -56,6 +58,8 @@ public class MoiveFragment extends Fragment {
     ImageView line01;
     @BindView(R.id.item_01_month)//月份
     ImageView item01Month;
+    @BindView(R.id.moive_notice)
+    TextView tv_notice;
     private ArrayList<ItemMoivefragment> itemMoivefragments = new ArrayList<>();
     private MyAdapter adapter;
     private RequestQueue quue;
@@ -63,6 +67,7 @@ public class MoiveFragment extends Fragment {
     private MyDialogCustom dialog;
     private Dialog mydialog;
     private MoiveCallBack moiveCallBack;
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -107,13 +112,18 @@ public class MoiveFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-
-
-                switch (position) {
-                    case 0:
+                Log.i("tmd",position+"");
+                if (position <(list_cri.size()-1)) {
+                    tv_notice.setVisibility(View.GONE);
+                    if (position == 0) {
                         Toast.makeText(getContext(), "亲 已经是最新内容了", Toast.LENGTH_LONG).show();
-                        break;
+                    }
 
+                } else if (position == (list_cri.size()-1)) {
+                  Animation animation=  AnimationUtils.loadAnimation(getContext(),R.anim.notice_in);
+                    animation.setFillAfter(true);
+                    tv_notice.startAnimation(animation);
+                    tv_notice.setVisibility(View.VISIBLE);
                 }
 
             }

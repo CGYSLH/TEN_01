@@ -1,59 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
     <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_fr_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fafafa"
-        android:id="@+id/tb_fr_01"
         >
         <RelativeLayout
+            android:id="@+id/rv_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rv_01"
            >
 
             <ImageView
+                android:id="@+id/item_01_week"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/item_01_week"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/week_1"/>
             <ImageView
+                android:id="@+id/item_01_data_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/item_01_week"
-                android:id="@+id/item_01_data_e"
                 android:src="@drawable/date_0"/>
             <ImageView
+                android:id="@+id/item_01_data_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/item_01_data_e"
-                android:id="@+id/item_01_data_f"
                 android:src="@drawable/date_1"/>
             <ImageView
+                android:id="@+id/line_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/line_01"
-                android:layout_below="@id/item_01_week"
                 android:layout_alignLeft="@id/item_01_week"
+                android:layout_below="@id/item_01_week"
                 android:src="@drawable/month_divide"
                 />
             <ImageView
-                android:layout_below="@id/item_01_week"
+                android:id="@+id/item_01_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/item_01_month"
+                android:layout_below="@id/item_01_week"
                 android:layout_toRightOf="@id/line_01"
                 android:src="@drawable/month_1"/>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/tb_fr_01"
+        android:id="@+id/pager_fr_01"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/pager_fr_01"
+        android:layout_below="@id/tb_fr_01"
         >
     </android.support.v4.view.ViewPager>
+    <TextView
+        android:id="@+id/moive_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tb_fr_01"
+        android:background="#d70b78"
+        android:text="最后一个了"
+        android:textColor="#f9fdf9"
+        android:visibility="gone"
+        />
 </RelativeLayout>
